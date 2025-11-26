@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e8ff;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #ff5df7;
+    text-align: center;
+  }
+  
+  .botones {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    background-color: #f060fd;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #f060fd;
+  }
+  
+  .formulario, .filtro {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 8px;
+    margin: 15px 0;
+  }
+  
+  label {
+    font-weight: bolder;
+    color: #eb10ff;
+  }
+  
+  input, select {
+    width: 80%;
+    padding: 6px;
+    border: 1.5px solid #f060fd;
+    border-radius: 5px;
+  }
+  
+  .listado {
+    background-color: #f060fd;
+    border: 1px solid #d9b3ff;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 10px;
+  }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Estudiantes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>GESTIÓN DE ESTUDIANTES</h1>
+
+        <div class="botones">
+            <button class="btn" onclick="crear()"> Crear</button>
+            <button class="btn" onclick="listar()"> Listar</button>
+            <button class="btn" onclick="buscar()"> Buscar</button>
+        </div>
+
+        <div id="crear" class="seccion" style="display: none;">
+            <form class="formulario" id="formCrear">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required />
+
+                <label>Apellido:</label>
+                <input type="text" id="apellido" required />
+                <label>Curso:</label>
+                    <select id="curso" required>
+                    <option value="">Seleccionar curso</option>
+                    <option value="1A">1A</option>
+                    <option value="1B">1B</option>
+                    <option value="2A">2A</option>
+                    <option value="2B">2B</option>
+                    <option value="3A">3A</option>
+                    <option value="3B">3B</option>
+                    <option value="4A">4A</option>
+                    <option value="4B">4B</option>
+                    <option value="5A">5A</option>
+                    <option value="5B">5B</option>
+                    <option value="6A">6A</option>
+                    <option value="6B">6B</option>
+                    <option value="7A">7A</option>
+                    <option value="7B">7B</option>
+                    </select>
+
+
+                <label>Nota 1:</label>
+                <input type="number" id="n1" required />
+
+                <label>Nota 2:</label>
+                <input type="number" id="n2" required />
+
+                <label>Nota 3:</label>
+                <input type="number" id="n3" required />
+            </form>
+            <button class="btn enviar" onclick="enviar()">Guardar</button>
+        </div>
+
+        <div id="listar" class="seccion" style="display: none;">
+            <h2>LISTADO DE ESTUDIANTE</h2>
+
+            <div class="botones">
+                <button class="btn" onclick="mostrarTodos()">Todos</button>
+                <button class="btn" onclick="mostrarCurso()">Por curso</button>
+                <button class="btn" onclick="mostrarPromedio()">Por promedio</button>
+            </div>
+
+            <div id="formCurso" class="filtro" style="display: none;">
+                <label>Curso:</label>
+                <button class="btn buscar" onclick="porCurso()">Buscar</button>
+                <select id="cursoBuscar">
+                <option value="1A">1A</option><option value="1B">1B</option>
+                <option value="2A">2A</option><option value="2B">2B</option>
+                <option value="3A">3A</option><option value="3B">3B</option>
+                <option value="4A">4A</option><option value="4B">4B</option>
+                <option value="5A">5A</option><option value="5B">5B</option>
+                <option value="6A">6A</option><option value="6B">6B</option>
+                <option value="7A">7A</option><option value="7B">7B</option>
+                </select>
+
+            </div>
+
+            <div id="formPromedio" class="filtro" style="display: none;">
+                <label>Promedio:</label>
+                <input type="text" id="promedioBuscar" />
+                <button class="btn buscar" onclick="porPromedio()">Buscar</button>
+            </div>
+            <div id="listado" class="listado"></div>
+        </div>
+
+        <div id="buscar" class="seccion" style="display: none;">
+            <button class="btn" onclick="mostrarMejorPromedio()">Mejor promedio</button>
+            <button class="btn" onclick="mostrarPorNombre()">Por nombre</button>
+            <button class="btn" onclick="mostrarEnGeneral()">En general</button>
+
+            <div id="formNombre" class="filtro" style="display: none;">
+                <label>Nombre:</label>
+                <input type="text" id="nombreBuscar2" />
+                <button class="btn buscar" onclick="porNombre()">Buscar</button>
+            </div>
+            <div id="resultado" class="listado"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
